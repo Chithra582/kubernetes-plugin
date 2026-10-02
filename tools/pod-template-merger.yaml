@@ -1,0 +1,16 @@
+name: "pod-template-merger"
+description: "Merges pipeline pod templates with cloud-level parent templates, handling inheritance and container overrides."
+input_schema:
+  type: object
+  properties:
+    parent_template_name:
+      type: string
+      description: "Name of the parent pod template defined in Jenkins configuration."
+    child_template_yaml:
+      type: string
+      description: "Child pod template YAML declared in the pipeline."
+    inherit_from:
+      type: string
+      description: "Comma-separated list of parent template names to inherit from."
+  required:
+    - child_template_yaml

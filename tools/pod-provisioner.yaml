@@ -1,0 +1,21 @@
+name: "pod-provisioner"
+description: "Submits Kubernetes Pod creation requests to the cluster API based on merged pod templates."
+input_schema:
+  type: object
+  properties:
+    namespace:
+      type: string
+      description: "Target Kubernetes namespace for pod deployment."
+    pod_name:
+      type: string
+      description: "Unique name of the dynamic agent pod."
+    pod_spec_yaml:
+      type: string
+      description: "Complete serialized Kubernetes Pod manifest YAML."
+    labels:
+      type: object
+      description: "Key-value label pairs applied to the pod."
+  required:
+    - namespace
+    - pod_name
+    - pod_spec_yaml

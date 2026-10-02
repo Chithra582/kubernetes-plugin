@@ -1,0 +1,22 @@
+name: "cloud-scaler"
+description: "Computes pending build queue depth and dynamically provisions pods against cluster resource quotas and concurrency limits."
+input_schema:
+  type: object
+  properties:
+    cloud_name:
+      type: string
+      description: "Name of the configured Jenkins Kubernetes cloud."
+    current_active_pods:
+      type: integer
+      description: "Number of currently executing agent pods."
+    pending_queue_size:
+      type: integer
+      description: "Number of build tasks awaiting executor capacity."
+    container_cap:
+      type: integer
+      description: "Maximum permitted concurrent pods configured for this cloud."
+  required:
+    - cloud_name
+    - current_active_pods
+    - pending_queue_size
+    - container_cap

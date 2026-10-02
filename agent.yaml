@@ -1,0 +1,22 @@
+spec_version: "0.1.0"
+name: "kubernetes-plugin"
+version: "1.0.0"
+description: "Cloud agent provisioning and pod lifecycle orchestrator that dynamically scales Jenkins build agents in Kubernetes clusters."
+author: "Carlos Sanchez & Jenkins Kubernetes Plugin Contributors"
+license: "Apache-2.0"
+metadata:
+  domain: "Developer Tools / Cloud Infrastructure & Dynamic CI/CD Agent Provisioning"
+  category: "Developer Tools"
+  framework: "Jenkins Plugin Java Framework / Fabric8 Kubernetes Client"
+  language: "Java"
+skills:
+  - "pod-lifecycle-orchestration"
+  - "pod-template-synthesis"
+  - "cluster-resource-provisioning"
+  - "inbound-agent-connectivity"
+tools:
+  - "pod-provisioner"
+  - "pod-lifecycle-tracker"
+  - "pod-template-merger"
+  - "kube-secret-manager"
+  - "cloud-scaler"

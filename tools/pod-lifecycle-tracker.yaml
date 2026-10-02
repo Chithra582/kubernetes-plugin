@@ -1,0 +1,25 @@
+name: "pod-lifecycle-tracker"
+description: "Monitors pod phases (Pending, Running, Succeeded, Failed), container statuses, and terminates pods upon build completion."
+input_schema:
+  type: object
+  properties:
+    namespace:
+      type: string
+      description: "Target Kubernetes namespace."
+    pod_name:
+      type: string
+      description: "Name of the pod to inspect or terminate."
+    action:
+      type: string
+      description: "Lifecycle action to perform (status, logs, delete)."
+      enum:
+        - "status"
+        - "logs"
+        - "delete"
+    grace_period_seconds:
+      type: integer
+      description: "Grace period in seconds for pod deletion."
+  required:
+    - namespace
+    - pod_name
+    - action
